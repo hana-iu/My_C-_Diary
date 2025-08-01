@@ -1,0 +1,89 @@
+Assignment_1( areas)
+name: Hana Yasser Mohamed. 
+ID: 24030106.
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+void menu();
+void area_of_circle();
+void area_of_rectangle ();
+void area_of_triangle();
+void end_the_program();
+const double PI = 3.14159;
+int main() {
+    int choice;
+cout <<"This a program that calculates the areas of different shapes"<<endl;
+menu();
+/*area_of_circle();
+area_of_rectangle ();
+area_of_triangle();
+end_the_program();*/
+while (true)
+{
+    cout <<"Enter your choice!"<<endl;
+    cin>>choice;
+    if (choice<1||choice>4)
+    {
+        cout<<"Invalid input, please enter a value between one and four"<<endl;
+        continue;
+    }
+    else if(choice == 1)
+    {
+        area_of_circle();
+    }
+    else if(choice == 2)
+    {
+        area_of_rectangle();
+    }
+    else if(choice == 3)
+    {
+        area_of_triangle();
+    }
+    else if(choice == 4)
+    {
+        end_the_program();
+    }
+}
+    return 0;
+}
+void menu()
+{cout <<"1. Calculate the area of a circle."<<endl;
+cout <<"2. Calculate the area of a rectangle."<<endl;
+cout <<"3. Calculate the area of a triangle."<<endl;
+cout<<"4. Quit."<<endl;
+//cout <<"Enter your choice (1-4): "<<endl;
+}
+void area_of_circle()
+{
+    double area;
+    double radius;
+    cout <<"Enter the radius of the circle: "<<endl;
+    cin>>radius;
+    area = PI*radius *radius;
+    cout<<"Area: "<<area<<endl;
+}
+void area_of_rectangle ()
+{
+    double length , width , area;
+    cout <<"Enter the length of the rectangle: "<<endl;
+    cin>>length;
+    cout <<"Enter the width of the rectangle: "<<endl;
+    cin>>width;
+    area = length*width;
+    cout<<"Area: "<<area<<endl;
+}
+void area_of_triangle()
+{
+    double height , base , area;
+    cout <<"Enter the length of the base: "<<endl;
+    cin>>base;
+    cout<<"Enter the height of the triangle: "<<endl;
+    cin>>height;
+    area = 0.5*base*height;
+    cout <<"Area: "<<area<<endl;
+}
+void end_the_program()
+{
+    cout <<"Thanks for using our program, bye!"<<endl;
+    exit(0);
+}

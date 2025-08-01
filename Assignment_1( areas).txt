@@ -1,6 +1,3 @@
-Assignment_1( areas)
-name: Hana Yasser Mohamed. 
-ID: 24030106.
 #include <iostream>
 #include <cstdlib>
 using namespace std;
